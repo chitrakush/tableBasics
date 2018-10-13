@@ -66,6 +66,9 @@
                     <navigationItem key="navigationItem" id="9SA-fP-2yY"/>
                     <connections>
                         <outlet property="heading" destination="VvX-a5-vv3" id="ST4-hm-aDt"/>
+                        <segue destination="c2N-hd-CAe" kind="popoverPresentation" identifier="LinkObject" id="58m-dM-ESa">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj2-xS-NjP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj2-xS-NjP">
                                 <rect key="frame" x="115" y="306" width="144" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -91,13 +94,14 @@
                         <color key="backgroundColor" red="0.79399948590000002" green="1" blue="0.90885851600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ctv-ui-4qv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EvD-xM-feO"/>
                     <connections>
                         <outlet property="infoLabel" destination="gj2-xS-NjP" id="8RX-52-VXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVg-aM-chL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="132"/>
+            <point key="canvasLocation" x="1655" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JDk-el-K5c">

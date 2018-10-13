@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var heading: UILabel!
     let cellData = ["1","2","3","4","5","6","7","8","9","10"]
+    var dataInfo : String?
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData.count
@@ -29,11 +30,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController
-        vc?.myString = cellData[indexPath.row]
-        self.navigationController?.pushViewController(vc!, animated: true)
+        
+         dataInfo = cellData[indexPath.row]
+        
+        performSegue(withIdentifier: "LinkObject", sender: self)
+        
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? SecondViewController
+        vc?.myString = dataInfo
+    }
+   
     deinit {
         print("ViewController deinit")
     }

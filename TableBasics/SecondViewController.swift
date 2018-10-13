@@ -12,8 +12,6 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var infoLabel: UILabel!
     var myString: String?
-
-    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
