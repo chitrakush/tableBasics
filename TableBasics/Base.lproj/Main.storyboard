@@ -66,9 +66,7 @@
                     <navigationItem key="navigationItem" id="9SA-fP-2yY"/>
                     <connections>
                         <outlet property="heading" destination="VvX-a5-vv3" id="ST4-hm-aDt"/>
-                        <segue destination="c2N-hd-CAe" kind="popoverPresentation" identifier="LinkObject" id="58m-dM-ESa">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="c2N-hd-CAe" kind="show" identifier="LinkObject" id="58m-dM-ESa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
