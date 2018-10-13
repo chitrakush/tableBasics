@@ -14,6 +14,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cellData = ["1","2","3","4","5","6","7","8","9","10"]
     var dataInfo : String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData.count
     }
@@ -22,11 +28,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellTableViewCell
         cell?.lbl.text = cellData[indexPath.row]
         return cell!
-    }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -42,9 +43,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc?.myString = dataInfo
     }
    
-    deinit {
-        print("ViewController deinit")
-    }
 }
 
 
