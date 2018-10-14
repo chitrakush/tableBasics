@@ -16,14 +16,10 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        infoLabel?.text = myString //"You Selected cell no. \(name)"
+        infoLabel?.text = myString
         
-        // Do any additional setup after loading the view.
     }
     
-    deinit {
-        print("SecondViewController deinit")
-    }
     /*
     // MARK: - Navigation
 
