@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, linkCellToView {
 
     @IBOutlet weak var heading: UILabel!
     let cellData = ["1","2","3","4","5","6","7","8","9","10"]
@@ -19,8 +19,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    func buttonCLicked () {
+        self.view.backgroundColor = UIColor.red
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData.count
     }
@@ -29,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellTableViewCell
         cell?.dataLabel.text = cellData[indexPath.row]
         cell?.dataImage.image = image
+        cell?.delegate = self
         return cell!
     }
     

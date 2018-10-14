@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol linkCellToView {
+    func buttonCLicked()
+}
+
 class CellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dataImage: UIImageView!
     @IBOutlet weak var dataLabel: UILabel!
     
     var dataToReplace : String = "Chitra"
+    
+    var delegate : linkCellToView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +34,6 @@ class CellTableViewCell: UITableViewCell {
 
     @IBAction func button(_ sender: Any) {
         dataLabel.text = dataToReplace
+        delegate?.buttonCLicked()
     }
 }
