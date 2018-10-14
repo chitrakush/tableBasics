@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var heading: UILabel!
     let cellData = ["1","2","3","4","5","6","7","8","9","10"]
     var dataInfo : String?
+    let image = UIImage(named: "dice2")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellTableViewCell
-        cell?.lbl.text = cellData[indexPath.row]
+        cell?.dataLabel.text = cellData[indexPath.row]
+        cell?.dataImage.image = image
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
