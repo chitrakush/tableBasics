@@ -11,7 +11,10 @@ import UIKit
 class CellTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var lbl: UILabel!
+    @IBOutlet weak var dataImage: UIImageView!
+    @IBOutlet weak var dataLabel: UILabel!
+    
+    var dataToReplace : String = "Chitra"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +27,7 @@ class CellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func button(_ sender: Any) {
+        dataLabel.text = dataToReplace
+    }
 }
