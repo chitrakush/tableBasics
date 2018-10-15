@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var heading: UILabel!
     var dataInfo : String?
     let cellData = ["red", "green", "yellow", "blue", "lightGray", "magenta", "cyan", "purple", "brown", "white"]
+    var secondVCbgColor: UIColor?
     let image = UIImage(named: "dice2")
     
     override func viewDidLoad() {
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
          dataInfo = cellData[indexPath.row]
-        
+        secondVCbgColor = uiColorMaker(color: cellData[indexPath.row])
         performSegue(withIdentifier: "LinkObject", sender: self)
         
     }
@@ -69,6 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as? SecondViewController
         vc?.myString = dataInfo
+        vc?.bgColor = secondVCbgColor
     }
    
 }

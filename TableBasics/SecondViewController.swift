@@ -12,10 +12,11 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var infoLabel: UILabel!
     var myString: String?
+    var bgColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = bgColor
         infoLabel?.text = myString
         
     }
