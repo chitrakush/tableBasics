@@ -1,0 +1,6 @@
+framework module Pods_TableBasics {
+  umbrella header "Pods-TableBasics-umbrella.h"
+
+  export *
+  module * { export * }
+}
