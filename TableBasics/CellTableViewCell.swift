@@ -9,7 +9,7 @@
 import UIKit
 
 protocol linkCellToView {
-    func buttonCLicked()
+    func buttonCLicked(color: String?)
 }
 
 class CellTableViewCell: UITableViewCell {
@@ -18,6 +18,7 @@ class CellTableViewCell: UITableViewCell {
     @IBOutlet weak var dataLabel: UILabel!
     
     var dataToReplace : String = "Chitra"
+    var colorName: String?
     
     var delegate : linkCellToView?
     
@@ -34,6 +35,6 @@ class CellTableViewCell: UITableViewCell {
 
     @IBAction func button(_ sender: Any) {
         dataLabel.text = dataToReplace
-        delegate?.buttonCLicked()
+        delegate?.buttonCLicked(color: colorName)
     }
 }

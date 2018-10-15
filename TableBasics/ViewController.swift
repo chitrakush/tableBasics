@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, linkCellToView {
 
     @IBOutlet weak var heading: UILabel!
-    let cellData = ["1","2","3","4","5","6","7","8","9","10"]
     var dataInfo : String?
+    let cellData = ["red", "green", "yellow", "blue", "lightGray", "magenta", "cyan", "purple", "brown", "white"]
     let image = UIImage(named: "dice2")
     
     override func viewDidLoad() {
@@ -20,8 +20,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func buttonCLicked () {
-        self.view.backgroundColor = UIColor.red
+    func buttonCLicked (color: String?) {
+        let getColor = uiColorMaker(color: color)
+        self.view.backgroundColor = getColor
+    }
+    
+    func uiColorMaker( color: String?) -> UIColor {
+            switch color {
+            case "red": return UIColor.red
+            case "blue": return UIColor.blue
+            case "green": return UIColor.green
+            case "yellow": return UIColor.yellow
+            case "lightGray": return UIColor.lightGray
+            case "magenta": return UIColor.magenta
+            case "cyan": return UIColor.cyan
+            case "purple": return UIColor.purple
+            case "brown": return UIColor.brown
+            case "white": return UIColor.white
+            default: return UIColor.black
+            }
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellTableViewCell
         cell?.dataLabel.text = cellData[indexPath.row]
         cell?.dataImage.image = image
+        cell?.colorName = cellData[indexPath.row]
         cell?.delegate = self
         return cell!
     }
