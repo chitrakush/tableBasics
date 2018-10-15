@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, linkCellToView {
 
     @IBOutlet weak var heading: UILabel!
-    var dataInfo : String?
+    var dataInfo: String?
     let cellData = ["red", "green", "yellow", "blue", "lightGray", "magenta", "cyan", "purple", "brown", "white"]
     var secondVCbgColor: UIColor?
     let image = UIImage(named: "dice2")

@@ -17,10 +17,10 @@ class CellTableViewCell: UITableViewCell {
     @IBOutlet weak var dataImage: UIImageView!
     @IBOutlet weak var dataLabel: UILabel!
     
-    var dataToReplace : String = "Chitra"
+    var dataToReplace: String = "Chitra"
     var colorName: String?
     
-    var delegate : linkCellToView?
+    var delegate: linkCellToView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
