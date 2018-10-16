@@ -40,6 +40,8 @@ playground.xcworkspace
 # Package.resolved
 .build/
 
+Breakpoints_v2.xcbkptlist
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
