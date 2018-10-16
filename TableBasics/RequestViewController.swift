@@ -1,5 +1,5 @@
 //
-//  requestViewController.swift
+//  RequestViewController.swift
 //  TableBasics
 //
 //  Created by chitra on 15/10/2018.
@@ -10,60 +10,78 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class RequestViewController: UIViewController {
-
-    @IBOutlet weak var showInfo: UITextView!
+class RequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, userDataLink {
+    
+    var dataArray = [AnyObject]()
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Alamofire.request("https://jsonplaceholder.typicode.com/users").responseJSON { response in
+            let result = response.result
+            print(result.value!)
+            
+            guard let resultx = result.value else {
+                print("data nil")
+                return
+            }
+            
+            self.dataArray = resultx as! [AnyObject]
+            print(self.dataArray)
+            self.tableView.reloadData()
+            
+        }
+       
+        //            if let data = response.data {
+        //                print("Data: \(String(describing: data))")
+        //            }
+        
+        //
+        //            do {
+        //                let json = try JSON(data: response.data!)
+        //                if let userName = json[0]["name"].string {
+        //                    //Now you got your value
+        //                    self.showInfo.text = json
+        //                }
+        //            }
+        //            catch {
+        //                print("json undefined")
+        //            }
+        
+        //            if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
+        //                let json = JSON(data: dataFromString)
+        //            }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserDataCell
+//        print( )
+        if let dataIndexId = dataArray[indexPath.row]["id"] {
+            cell?.userId.text = "\(dataIndexId)"
+        }
+        else {
+            cell?.userId.text = "not defined"
+        }
+        cell?.userName.text = dataArray[indexPath.row]["name"] as? String
+        cell?.userEmail.text = dataArray[indexPath.row]["email"] as? String
+        return cell!
+    }
+    
+    func passUserData(name: String?, id: Int?, email: String?) {
+        
     }
     
     @IBAction func getDataButton(_ sender: Any) {
-        Alamofire.request("https://jsonplaceholder.typicode.com/users").responseJSON { response in
-//            print("Request: \(String(describing: response.request))")   // original url request //
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
-            
-            if let json = response.result.value {
-//                print("JSON: \(json)") // serialized json response
-                self.showInfo.text = String(describing: json)
-            }
-            else {
-                self.showInfo.text = "data undefined"
-            }
-
-//            if let data = response.data {
-//                print("Data: \(String(describing: data))")
-//            }
-            
-//
-//            do {
-//                let json = try JSON(data: response.data!)
-//                if let userName = json[0]["name"].string {
-//                    //Now you got your value
-//                    self.showInfo.text = json
-//                }
-//            }
-//            catch {
-//                print("json undefined")
-//            }
-            
-//            if let dataFromString = jsonString.data(using: .utf8, allowLossyConversion: false) {
-//                let json = JSON(data: dataFromString)
-//            }
-//
-            
-        }
+        
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
