@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol DeleteArrayProtocol {
-    func deleteUserFromArray(indexValue: Int)
-}
-
 class UserDetailViewController: UIViewController {
     
 
@@ -21,7 +17,6 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var labelCompanyName: UILabel!
     var name: String?, username: String?, email: String?, company: [String: Any]?
    
-    var delegate: DeleteArrayProtocol?
     var getIndex: Int?
     
     override func viewDidLoad() {
@@ -38,7 +33,8 @@ class UserDetailViewController: UIViewController {
             print("nil index")
             return
         }
-        delegate?.deleteUserFromArray(indexValue: index)
+
+        NotificationCenter.default.post(name: Notification.Name("deleteUserNotification"), object: nil, userInfo: ["index": index])
         self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DeleteArrayProtocol {
+class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     var dataArray = [[String: Any]]()
     var tempName: String?
@@ -22,6 +22,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         getRequestResponse()
+        registerNotification()
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,13 +69,19 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc?.email = tempEmail
         vc?.company = company
         vc?.getIndex = index
-        vc?.delegate = self
         
     }
     
-    func deleteUserFromArray(indexValue: Int){
-        dataArray.remove(at: indexValue)
-        self.tableView.reloadData()
+    @objc func deleteUserFromArray(_ notification: NSNotification){
+        guard  let indexDict = notification.userInfo as NSDictionary? else {
+            print("nil indexArray found")
+            return
+        }
+        if let indexValue = indexDict["index"] as? Int{
+            dataArray.remove(at: indexValue)
+            self.tableView.reloadData()
+        }
+        
     }
     
     func getRequestResponse (){
@@ -114,6 +121,9 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
 //
 //        }
 //    }
+    func registerNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(deleteUserFromArray(_ :)), name: NSNotification.Name("deleteUserNotification"), object: nil)
+    }
   
     @IBAction func getDataButton(_ sender: Any) {
         getRequestResponse()
