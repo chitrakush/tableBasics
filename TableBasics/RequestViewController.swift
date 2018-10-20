@@ -8,10 +8,12 @@
 
 import UIKit
 
+
 class RequestViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var dataArray = [[String: Any]]()
     //var testArray = ["name", "label2", "label3"]
+
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -76,4 +78,5 @@ class RequestViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
   
+
 }

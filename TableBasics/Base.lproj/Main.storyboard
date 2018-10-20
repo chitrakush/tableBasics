@@ -176,7 +176,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="getDataButton:" destination="2Qd-hP-iz2" eventType="touchUpInside" id="gDQ-TZ-XU5"/>
+                                    <action selector="getDataButton:" destination="2Qd-hP-iz2" eventType="touchUpInside" id="5Kq-jV-rXh"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2b7-Ex-hEJ">
