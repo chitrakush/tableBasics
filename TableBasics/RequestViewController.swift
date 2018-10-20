@@ -20,6 +20,7 @@ class RequestViewController: UIViewController {
     }
     
     @IBAction func getDataButton(_ sender: Any) {
+        // we are in test branch
         Alamofire.request("https://jsonplaceholder.typicode.com/users").responseJSON { response in
 //            print("Request: \(String(describing: response.request))")   // original url request //
 //            print("Response: \(String(describing: response.response))") // http url response
