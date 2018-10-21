@@ -10,11 +10,11 @@ import UIKit
 
 class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
-    var dataArray = [[String: Any]]()
+    var userData: [User] = []
     var tempName: String?
     var tempUsername: String?
     var tempEmail: String?
-    var tempCompany: [String:Any]?
+    var tempCompany: String?
     var indexToPass: Int?
    
     @IBOutlet weak var tableView: UITableView!
@@ -26,7 +26,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        return userData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -35,20 +35,19 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "userCellData", for: indexPath) as? userCell
-        cell?.name.text = dataArray[indexPath.row]["name"] as? String
-        cell?.email.text = dataArray[indexPath.row]["email"] as? String
-        cell?.userName.text = dataArray[indexPath.row]["username"] as? String
+        cell?.name.text = userData[indexPath.row].name
+        cell?.email.text = userData[indexPath.row].email
+        cell?.userName.text = userData[indexPath.row].username
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-         tempName = dataArray[indexPath.row]["name"] as? String
-         tempUsername = dataArray[indexPath.row]["email"] as? String
-         tempEmail = dataArray[indexPath.row]["username"] as? String
-        if let company = dataArray[indexPath.row]["company"] as? [String:Any] {
-           tempCompany = company
-        }
+         tempName = userData[indexPath.row].name
+         tempUsername = userData[indexPath.row].username
+         tempEmail = userData[indexPath.row].email
+         tempCompany = userData[indexPath.row].company.name
+        
          indexToPass = indexPath.row
         performSegue(withIdentifier: "cellToUserDetailSegue", sender: self)
         
@@ -78,7 +77,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         if let indexValue = indexDict["index"] as? Int{
-            dataArray.remove(at: indexValue)
+            userData.remove(at: indexValue)
             self.tableView.reloadData()
         }
         
@@ -93,15 +92,9 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
                     print(error?.localizedDescription ?? "Response Error")
                     return }
             do{
-                //here dataResponse received from a network request
-                let jsonResponse = try JSONSerialization.jsonObject(with:
-                    dataResponse, options: [])
-                //  print(jsonResponse) //Response result
-                
-                guard let jsonArray = jsonResponse as? [[String: Any]] else {
-                    return
-                }
-                self.dataArray = jsonArray
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode([User].self, from: dataResponse)
+                self.userData = decodedResponse
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
 

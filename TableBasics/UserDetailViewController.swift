@@ -15,7 +15,7 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var labelUserName: UILabel!
     @IBOutlet weak var labelEmail: UILabel!
     @IBOutlet weak var labelCompanyName: UILabel!
-    var name: String?, username: String?, email: String?, company: [String: Any]?
+    var name: String?, username: String?, email: String?, company: String?
    
     var getIndex: Int?
     
@@ -24,7 +24,7 @@ class UserDetailViewController: UIViewController {
         labelName.text = name
         labelUserName.text = username
         labelEmail.text = email
-        labelCompanyName.text = company!["name"] as? String
+        labelCompanyName.text = company
         // Do any additional setup after loading the view.
     }
 
