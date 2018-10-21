@@ -1,0 +1,30 @@
+Commit:  git commit -m “message here”
+
+Push changes: git push origin <branchname>
+
+Create branch: git branch <new branchname>
+
+Remove tracked file from git: git rm <file path>
+
+Change from one branch to other: git checkout <destination branch>
+
+Revert committed changes[only for unpunished changes]: git reset <branchname>~(number of steps to go back)
+
+Merging Branch: 
+1) Go to Parent branch (Merge Destination)
+2) command: git merge <child branch(which needs to be merged)>
+3) if there is any conflict, resolve it and commit the changes in parent branch
+4) push changes to parent branch
+
+=> In swift, “weak” keyword is used when declaring delegate which is always an object of subview or child element
+ 
+Edit unpushed commit message:
+1) command: git commit --amend
+2) open INSERT mode of the opened file by pressing i
+3) Edit the file
+4) quit Insert mode by pressing <esc> key
+5) Save and exit file by typing ‘:x!’
+
+Adding new file from terminal: touch <filename> 
+(It will create new file in current folder)
+ 
