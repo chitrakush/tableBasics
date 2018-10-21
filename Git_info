@@ -17,7 +17,7 @@ Merging Branch:
 4) push changes to parent branch
 
 Delete branch:
-1) from local: git -d <branchname>
+1) from local: git branch -d <branchname>
 2) from remote: git push origin :<branchname>
 
 => In swift, “weak” keyword is used when declaring delegate which is always an object of subview or child element

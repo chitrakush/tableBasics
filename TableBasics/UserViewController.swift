@@ -108,12 +108,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         task.resume()
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "cellToUserDetailSegue" {
-//
-//        }
-//    }
+
     func registerNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(deleteUserFromArray(_ :)), name: NSNotification.Name("deleteUserNotification"), object: nil)
     }
