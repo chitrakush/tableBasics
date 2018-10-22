@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+//        #if Debug
+//            print("Debug")
+//        #else
+//        print("RELEASE")
+//
+//        #endif
         // Override point for customization after application launch.
         return true
     }

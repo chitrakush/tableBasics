@@ -11,6 +11,20 @@
 		5A121E6F217860F200E86ADD /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A121E6E217860F200E86ADD /* UserViewController.swift */; };
 		5A121E712178635900E86ADD /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A121E702178635900E86ADD /* userCell.swift */; };
 		5A18D990217C996B0033A043 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18D98F217C996B0033A043 /* User.swift */; };
+		5A18D994217DE35B0033A043 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23BF1A2177A71300A82AF9 /* UserDetailViewController.swift */; };
+		5A18D995217DE35B0033A043 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D5F242171E4C800311125 /* SecondViewController.swift */; };
+		5A18D996217DE35B0033A043 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A121E6E217860F200E86ADD /* UserViewController.swift */; };
+		5A18D997217DE35B0033A043 /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D5F222171DB4800311125 /* CellTableViewCell.swift */; };
+		5A18D998217DE35B0033A043 /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A121E702178635900E86ADD /* userCell.swift */; };
+		5A18D999217DE35B0033A043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D5F102171D85A00311125 /* ViewController.swift */; };
+		5A18D99A217DE35B0033A043 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE048E32174B11300825AD9 /* RequestViewController.swift */; };
+		5A18D99B217DE35B0033A043 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23BF182177922300A82AF9 /* UserTableViewCell.swift */; };
+		5A18D99C217DE35B0033A043 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A18D98F217C996B0033A043 /* User.swift */; };
+		5A18D99D217DE35B0033A043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D5F0E2171D85A00311125 /* AppDelegate.swift */; };
+		5A18D99F217DE35B0033A043 /* Pods_TableBasics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C699A50D9C1B88290303FD9 /* Pods_TableBasics.framework */; };
+		5A18D9A1217DE35B0033A043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4D5F172171D85B00311125 /* LaunchScreen.storyboard */; };
+		5A18D9A2217DE35B0033A043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4D5F152171D85B00311125 /* Assets.xcassets */; };
+		5A18D9A3217DE35B0033A043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4D5F122171D85A00311125 /* Main.storyboard */; };
 		5A23BF192177922300A82AF9 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23BF182177922300A82AF9 /* UserTableViewCell.swift */; };
 		5A23BF1B2177A71300A82AF9 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23BF1A2177A71300A82AF9 /* UserDetailViewController.swift */; };
 		5A4D5F0F2171D85A00311125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D5F0E2171D85A00311125 /* AppDelegate.swift */; };
@@ -29,9 +43,11 @@
 		5A121E6E217860F200E86ADD /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		5A121E702178635900E86ADD /* userCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
 		5A18D98F217C996B0033A043 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5A18D9A9217DE35B0033A043 /* TableBasicsProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableBasicsProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A18D9AA217DE35F0033A043 /* TableBasics copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TableBasics copy-Info.plist"; path = "/Users/chitra/Desktop/TableBasics/TableBasics copy-Info.plist"; sourceTree = "<absolute>"; };
 		5A23BF182177922300A82AF9 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		5A23BF1A2177A71300A82AF9 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
-		5A4D5F0B2171D85A00311125 /* TableBasics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableBasics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4D5F0B2171D85A00311125 /* TableBasicsDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableBasicsDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4D5F0E2171D85A00311125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A4D5F102171D85A00311125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A4D5F132171D85A00311125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +61,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A18D99E217DE35B0033A043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A18D99F217DE35B0033A043 /* Pods_TableBasics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4D5F082171D85A00311125 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,13 +87,15 @@
 				5A4D5F0C2171D85A00311125 /* Products */,
 				7F8C03D4CDB5CA56B8554FDB /* Pods */,
 				A88B3DD4E448417F90AA39D9 /* Frameworks */,
+				5A18D9AA217DE35F0033A043 /* TableBasics copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		5A4D5F0C2171D85A00311125 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A4D5F0B2171D85A00311125 /* TableBasics.app */,
+				5A4D5F0B2171D85A00311125 /* TableBasicsDev.app */,
+				5A18D9A9217DE35B0033A043 /* TableBasicsProd.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +141,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A4D5F0A2171D85A00311125 /* TableBasics */ = {
+		5A18D991217DE35B0033A043 /* TableBasicsProd */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A4D5F1D2171D85B00311125 /* Build configuration list for PBXNativeTarget "TableBasics" */;
+			buildConfigurationList = 5A18D9A6217DE35B0033A043 /* Build configuration list for PBXNativeTarget "TableBasicsProd" */;
+			buildPhases = (
+				5A18D992217DE35B0033A043 /* [CP] Check Pods Manifest.lock */,
+				5A18D993217DE35B0033A043 /* Sources */,
+				5A18D99E217DE35B0033A043 /* Frameworks */,
+				5A18D9A0217DE35B0033A043 /* Resources */,
+				5A18D9A4217DE35B0033A043 /* [CP] Embed Pods Frameworks */,
+				5A18D9A5217DE35B0033A043 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableBasicsProd;
+			productName = TableBasics;
+			productReference = 5A18D9A9217DE35B0033A043 /* TableBasicsProd.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A4D5F0A2171D85A00311125 /* TableBasicsDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A4D5F1D2171D85B00311125 /* Build configuration list for PBXNativeTarget "TableBasicsDev" */;
 			buildPhases = (
 				85F327FC84AE90375B248875 /* [CP] Check Pods Manifest.lock */,
 				5A4D5F072171D85A00311125 /* Sources */,
@@ -130,9 +176,9 @@
 			);
 			dependencies = (
 			);
-			name = TableBasics;
+			name = TableBasicsDev;
 			productName = TableBasics;
-			productReference = 5A4D5F0B2171D85A00311125 /* TableBasics.app */;
+			productReference = 5A4D5F0B2171D85A00311125 /* TableBasicsDev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,12 +209,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A4D5F0A2171D85A00311125 /* TableBasics */,
+				5A4D5F0A2171D85A00311125 /* TableBasicsDev */,
+				5A18D991217DE35B0033A043 /* TableBasicsProd */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A18D9A0217DE35B0033A043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A18D9A1217DE35B0033A043 /* LaunchScreen.storyboard in Resources */,
+				5A18D9A2217DE35B0033A043 /* Assets.xcassets in Resources */,
+				5A18D9A3217DE35B0033A043 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4D5F092171D85A00311125 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +274,59 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableBasics/Pods-TableBasics-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5A18D992217DE35B0033A043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableBasics-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A18D9A4217DE35B0033A043 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TableBasics/Pods-TableBasics-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableBasics/Pods-TableBasics-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A18D9A5217DE35B0033A043 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableBasics/Pods-TableBasics-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85F327FC84AE90375B248875 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +348,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A18D993217DE35B0033A043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A18D994217DE35B0033A043 /* UserDetailViewController.swift in Sources */,
+				5A18D995217DE35B0033A043 /* SecondViewController.swift in Sources */,
+				5A18D996217DE35B0033A043 /* UserViewController.swift in Sources */,
+				5A18D997217DE35B0033A043 /* CellTableViewCell.swift in Sources */,
+				5A18D998217DE35B0033A043 /* userCell.swift in Sources */,
+				5A18D999217DE35B0033A043 /* ViewController.swift in Sources */,
+				5A18D99A217DE35B0033A043 /* RequestViewController.swift in Sources */,
+				5A18D99B217DE35B0033A043 /* UserTableViewCell.swift in Sources */,
+				5A18D99C217DE35B0033A043 /* User.swift in Sources */,
+				5A18D99D217DE35B0033A043 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4D5F072171D85A00311125 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +404,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A18D9A7217DE35B0033A043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D0FECF369AE7243C5C48BC4 /* Pods-TableBasics.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TableBasics copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.home.testing.TableBasics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A18D9A8217DE35B0033A043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341450798561628FAF185CE4 /* Pods-TableBasics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TableBasics copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.home.testing.TableBasics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5A4D5F1B2171D85B00311125 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -432,6 +595,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A18D9A6217DE35B0033A043 /* Build configuration list for PBXNativeTarget "TableBasicsProd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A18D9A7217DE35B0033A043 /* Debug */,
+				5A18D9A8217DE35B0033A043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5A4D5F062171D85A00311125 /* Build configuration list for PBXProject "TableBasics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -441,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A4D5F1D2171D85B00311125 /* Build configuration list for PBXNativeTarget "TableBasics" */ = {
+		5A4D5F1D2171D85B00311125 /* Build configuration list for PBXNativeTarget "TableBasicsDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A4D5F1E2171D85B00311125 /* Debug */,
