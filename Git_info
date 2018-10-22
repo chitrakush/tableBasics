@@ -32,3 +32,10 @@ Edit unpushed commit message:
 Adding new file from terminal: touch <filename> 
 (It will create new file in current folder)
  
+=> Project target and scheme:
+1) We can create different target which usually share same project files but have different configuration settings and can have different app identifier like for production and development 
+
+2) We can create different schemes in one target to further have different settings.
+
+
+
