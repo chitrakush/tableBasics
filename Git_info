@@ -10,6 +10,10 @@ Change from one branch to other: git checkout <destination branch>
 
 Revert committed changes[only for unpunished changes]: git reset <branchname>~(number of steps to go back)
 
+Delete uncommitted files/changes: git clean -fd (-fd to force delete)
+
+Delete uncommitted changes only: git checkout .
+
 Merging Branch: 
 1) Go to Parent branch (Merge Destination)
 2) command: git merge <child branch(which needs to be merged)>
@@ -37,5 +41,11 @@ Adding new file from terminal: touch <filename>
 
 2) We can create different schemes in one target to further have different settings.
 
+=> We can have multiple Storyboard in a project
+=> Navigation controller eases the memory allocation process
+=> Navigation controller has an array of type viewcontroller in which push and pop operations of viewcontrollers are dealt
+=> Navigation controller is loaded on UIwindow in app delegate, and loads root view controller on itself and further loads other view controllers upon firstly loaded and so on
+=> init() -> Contructor -> it allocates memory to class properties
+=> deinit() -> Destructor -> it is called before memory release
 
-
+Memory
